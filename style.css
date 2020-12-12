@@ -29,7 +29,7 @@ a:visited {
   width: 210mm;
   height: 297mm;
   background-color: #fffffe;
-  padding: 2rem 2rem 5rem;
+  padding: 2rem 2rem 4rem;
 }
 .resume > *:not(footer) {
   display: grid;
@@ -158,23 +158,25 @@ a:visited {
 .resume [data-skill="9"]::before {
   width: 90%;
 }
-.resume__education {
+
+.timeline {
   border-collapse: collapse;
+  word-break: break-word;
 }
-.resume__education-time {
+.timeline__time {
   vertical-align: top;
   white-space: nowrap;
   padding-right: 1rem;
   text-align: right;
 }
-.resume__education tr:not(:last-child) td {
+.timeline tr:not(:last-child) td {
   padding-bottom: 1rem;
 }
-.resume__education-info {
+.timeline__info {
   padding-left: 1rem;
   position: relative;
 }
-.resume__education-info::before {
+.timeline__info::before {
   content: "";
   position: absolute;
   width: 0.2rem;
@@ -184,7 +186,7 @@ a:visited {
   background-color: #90b4ce;
   transform: translate(-50%, 0);
 }
-.resume__education-info::after {
+.timeline__info::after {
   content: "";
   position: absolute;
   width: 0.5rem;
@@ -195,11 +197,14 @@ a:visited {
   background-color: #3da9fc;
   border-radius: 100%;
 }
-.resume__education-school {
+.timeline__title {
+  margin-bottom: 0.5rem;
+}
+.timeline__school {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
-.resume__education-detail {
+.timeline__detail {
   line-height: 1.2rem;
 }
 

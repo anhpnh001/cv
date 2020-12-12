@@ -35,7 +35,7 @@ a {
     width: 210mm;
     height: 297mm;
     background-color: #fffffe;
-    padding: 2rem 2rem 5rem;
+    padding: 2rem 2rem 4rem;
 
     >*:not(footer) {
         display: grid;
@@ -169,61 +169,66 @@ a {
             width: (#{$i})+"0%";
         }
     }
+}
 
-    &__education {
-        border-collapse: collapse;
+.timeline {
+    border-collapse: collapse;
+    word-break: break-word;
 
-        &-time {
-            vertical-align: top;
-            white-space: nowrap;
-            padding-right: 1rem;
-            text-align: right;
-        }
+    &__time {
+        vertical-align: top;
+        white-space: nowrap;
+        padding-right: 1rem;
+        text-align: right;
+    }
 
-        tr {
-            &:not(:last-child) {
-                td {
-                    padding-bottom: 1rem;
-                }
+    tr {
+        &:not(:last-child) {
+            td {
+                padding-bottom: 1rem;
             }
         }
+    }
 
-        &-info {
-            padding-left: 1rem;
-            position: relative;
+    &__info {
+        padding-left: 1rem;
+        position: relative;
 
-            &::before {
-                content: "";
-                position: absolute;
-                width: .2rem;
-                height: 100%;
-                left: 0;
-                top: 0;
-                background-color: $secondary-color;
-                transform: translate(-50%, 0);
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                width: .5rem;
-                height: .5rem;
-                left: 0;
-                top: .5rem;
-                transform: translate(-50%, -50%);
-                background-color: $button-color;
-                border-radius: 100%;
-            }
+        &::before {
+            content: "";
+            position: absolute;
+            width: .2rem;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: $secondary-color;
+            transform: translate(-50%, 0);
         }
 
-        &-school {
-            font-size: 1.1rem;
-            margin-bottom: .5rem;
+        &::after {
+            content: "";
+            position: absolute;
+            width: .5rem;
+            height: .5rem;
+            left: 0;
+            top: .5rem;
+            transform: translate(-50%, -50%);
+            background-color: $button-color;
+            border-radius: 100%;
         }
+    }
 
-        &-detail {
-            line-height: 1.2rem;
-        }
+    &__title {
+        margin-bottom: .5rem;
+    }
+
+    &__school {
+        font-size: 1.1rem;
+        margin-bottom: .5rem;
+    }
+
+    &__detail {
+        line-height: 1.2rem;
     }
 }
 
